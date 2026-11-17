@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a101c" />
+  <meta name="description" content="An interactive JavaScript technical interview practice studio with quizzes, explanations, coding challenges, and facilitator notes." />
+  <title>Mat's Interview Lab · JavaScript Practice Studio</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>M</span><small>JS</small></div>
+        <div><div class="brand-name">MAT'S <span>LAB</span></div><div class="brand-subtitle">INTERVIEW PRACTICE</div></div>
+      </div>
+      <div class="sidebar-section-label">WORKSPACE</div>
+      <nav class="nav" id="primary-nav">
+        <button type="button" class="nav-item active" data-view="home"><span class="nav-icon">◫</span><span>Overview</span></button>
+        <button type="button" class="nav-item" data-view="quiz"><span class="nav-icon">◇</span><span>Question bank</span><span class="nav-amount" id="bank-count">38</span></button>
+        <button type="button" class="nav-item" data-view="code"><span class="nav-icon">⌘</span><span>Code lab</span></button>
+        <button type="button" class="nav-item" data-view="coach"><span class="nav-icon">▤</span><span>Coach's guide</span></button>
+        <button type="button" class="nav-item" data-view="results"><span class="nav-icon">▥</span><span>Results</span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-bottom">
+        <div class="privacy-panel">
+          <span class="privacy-light"></span>
+          <div><strong>Local-first practice</strong><span>Answers stay in this browser.</span></div>
+        </div>
+        <button type="button" class="sidebar-reset" id="reset-session">↻ &nbsp; Reset all progress</button>
+      </div>
+    </aside>
+    <div class="page-column">
+      <header class="topbar">
+        <div class="topbar-breadcrumb"><span>STUDY ROOM</span><span class="crumb-separator">/</span><strong id="page-location">OVERVIEW</strong></div>
+        <div class="topbar-right">
+          <span class="status-pip"></span><span class="session-status">SESSION READY</span>
+          <button class="focus-button" type="button" id="focus-toggle" title="Hide/show navigation for screen sharing">⛶ <span>Focus view</span></button>
+        </div>
+      </header>
+      <main id="app" class="main" tabindex="-1"></main>
+      <footer class="site-footer"><span>Made for practicing together, one question at a time.</span><span>Independent practice tool · Not affiliated with LaunchCode.</span></footer>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
